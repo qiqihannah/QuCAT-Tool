@@ -1,10 +1,8 @@
 import time
 import os
 import configparser
-import shutil
 import sys
-from generating import generate_test_suite
-import executing
+from qucat_tool import executing
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
