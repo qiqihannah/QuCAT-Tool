@@ -124,11 +124,20 @@ If you enter '3', QuCAT will guide you to enter the absolute root of your config
 ```
 please enter the root of your configuration file.(.ini file)
 ```
-QuCAT will generate test cases according to the coverage criterion and execute to get results.
+Then, you can enter 1 or 2 to specify the usage scenario:
 
-If users provide a full or partial program specification, Quito will assess the results according to the two test oracles that have been proposed in <a href="https://ieeexplore.ieee.org/abstract/document/9438603">this paper</a>:
-- uof: Whether an observed output is correct according to program specification. If not, the program is failed;;
-- wodf: If all the observed outputs corresponding to an input are valid, then it compares their observed probabilities with the ones specified in the Program Specification file. If the differences are statistically significant (i.e., a p-value lower than the chosen significance level), the program is failed.
+```
+1. Scenario one
+
+1. Scenario two
+```
+After that, you can choose whether to upload your seed row file. If you choose 'yes', QuCAT will guide you to enter the root.
+
+```
+"Please enter the root of your file.(.txt file)"
+```
+
+After all the preparation, QuCAT will generate test cases your requirement and execute to get results.
 
 After running, you get 3 text files (2 in case there is no program specification). They contain
 - Test Suites
