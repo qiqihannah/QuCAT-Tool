@@ -3,7 +3,7 @@
 <img src="qucat_logo.png" width="200">
 
 ## Description (to change)
-With the development of quantum computing, proposing systematic and automatic approaches to testing quantum programs is getting more and more essential. In this paper, we present the quantum software testing tool \qucat tool, which implements a software testing technique, combinatorial testing. In this tool, we apply two test oracles to assess test results based on inputs and outputs. \qucat can be used in two usage scenarios, i.e., generate combinatorial test suites with a specific strength, and generate test suites with incremental strengths until it finds a fault, to help find faults of quantum programs. In addition, we assess the cost and effectiveness of \qucat tool with 3 faulty versions for 5 quantum programs. Results show that combinatorial test suites with low strength can find faults with low cost while that with higher strength performs better when it comes to some difficult faults with relatively higher cost.
+With the development of quantum computing, proposing systematic and automatic approaches to testing quantum programs is getting more and more essential. In this paper, we present the quantum software testing tool QuCAT tool, which implements a software testing technique, combinatorial testing. In this tool, we apply two test oracles to assess test results based on inputs and outputs. \qucat contains two functionalities, i.e., generate combinatorial test suites with a specific strength, and generate test suites with incremental strengths until it finds a fault, to help find faults of quantum programs. In addition, we assess the cost and effectiveness of QuCAT tool with 3 faulty versions for 5 quantum programs. Results show that combinatorial test suites with low strength can find faults with low cost while that with higher strength performs better when it comes to some difficult faults with relatively higher cost.
 
 ## Architecture of QuCAT
 
@@ -44,7 +44,7 @@ and here
   pip install rpy2
   ```
 
-## How to use Quito?
+## How to use QuCAT?
 ### Quantum Program File
 - The quantum program should be written with Qiskit.
 - The code has to be structured in a function named as 'run' with one parameter that refers to the quantum circuit.
@@ -106,7 +106,7 @@ First, you need to activate the conda environment:
 
 Second, you can start the program (from the repository root) as follows:
    ```
-   python qucat_tool/quito.py
+   python qucat_tool/qucat.py
    ```
    
 Third, you can enter a number to select your operation.
@@ -124,12 +124,12 @@ If you enter '3', QuCAT will guide you to enter the absolute root of your config
 ```
 please enter the root of your configuration file.(.ini file)
 ```
-Then, you can enter 1 or 2 to specify the usage scenario:
+Then, you can enter 1 or 2 to specify the fundtionality:
 
 ```
-1. Scenario one
+1. Functionality One
 
-1. Scenario two
+1. Functionality Two
 ```
 After that, you can choose whether to upload your seed row file. If you choose 'yes', QuCAT will guide you to enter the root.
 
