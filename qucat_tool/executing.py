@@ -96,8 +96,8 @@ def comb_testing_scenario1(config_dic):
     result_root = os.path.join(config_dic['program_folder'], config_dic['module_name'], config_dic['module_name']+'_ScenarioOne')
     if not os.path.exists(result_root):
         os.makedirs(result_root)
-    generate_test_suite(config_dic, 'ScenarioOne', config_dic['o'])
-    test_suite_file = os.path.join(result_root, config_dic['module_name'] + '_input_o' + str(config_dic['o']) + '.txt')
+    generate_test_suite(config_dic, 'ScenarioOne', config_dic['k'])
+    test_suite_file = os.path.join(result_root, config_dic['module_name'] + '_input_o' + str(config_dic['k']) + '.txt')
     execution_time = 0
     with open(test_suite_file, 'r') as input_file:
         input_file.readline()
@@ -120,8 +120,8 @@ def comb_testing_scenario1(config_dic):
             input_str = input_file.readline().replace('\n', '').replace('\t', '')
             if test_result != 'PASS':
                 count_fail += 1
-    test_result_file = os.path.join(result_root, config_dic['module_name'] + '_result_o' + str(config_dic['o']) + '.txt')
-    GenerateUnitTest.generateUnitTestClass(config_dic['module_name'], config_dic['inputID'], config_dic['outputID'], config_dic['num_qubit'], inputs_list, inputs_str_list, counts_list, config_dic['program_folder'], 1, config_dic['o'])
+    test_result_file = os.path.join(result_root, config_dic['module_name'] + '_result_o' + str(config_dic['k']) + '.txt')
+    GenerateUnitTest.generateUnitTestClass(config_dic['module_name'], config_dic['inputID'], config_dic['outputID'], config_dic['num_qubit'], inputs_list, inputs_str_list, counts_list, config_dic['program_folder'], 1, config_dic['k'])
     with open(test_result_file, 'w') as result_file:
         result_file.write('inputs' + '\t' + 'outputs' + '\t' + 'result' +'\n')
         print("number of test cases:" + str(len(list_data)))
@@ -151,9 +151,9 @@ def comb_testing_scenario2(config_dic):
     inputs_str_list = []
     execution_time = 0
     count_fail = 0
-    for o in range(2, config_dic['o']+1):
-        generate_test_suite(config_dic, 'ScenarioTwo', o)
-        test_suite_file = os.path.join(result_root, config_dic['module_name'] + '_input_o' + str(o) + '.txt')
+    for k in range(2, config_dic['k']+1):
+        generate_test_suite(config_dic, 'ScenarioTwo', k)
+        test_suite_file = os.path.join(result_root, config_dic['module_name'] + '_input_o' + str(k) + '.txt')
         with open(test_suite_file, 'r') as input_file:
             input_file.readline()
             input_str = input_file.readline().replace('\n', '').replace('\t', '')
@@ -175,7 +175,7 @@ def comb_testing_scenario2(config_dic):
         if flag_fail == True:
             break
     test_result_file = os.path.join(result_root, config_dic['module_name'] + '_result' + '.txt')
-    GenerateUnitTest.generateUnitTestClass(config_dic['module_name'], config_dic['inputID'], config_dic['outputID'], config_dic['num_qubit'], inputs_list, inputs_str_list, counts_list, config_dic['program_folder'], 2, config_dic['o'])
+    GenerateUnitTest.generateUnitTestClass(config_dic['module_name'], config_dic['inputID'], config_dic['outputID'], config_dic['num_qubit'], inputs_list, inputs_str_list, counts_list, config_dic['program_folder'], 2, config_dic['k'])
     with open(test_result_file, 'w') as result_file:
         result_file.write('inputs' + '\t' + 'outputs' + '\t' + 'result' + '\n')
         for i in range(len(list_data)):
@@ -192,7 +192,7 @@ if __name__ == '__main__':
     config_dic['valid_output'] = ['00', '11', '00', '11','01', '10', '01', '10']
     config_dic['p'] = [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
     config_dic['n'] = 2
-    config_dic['o'] = 4
+    config_dic['k'] = 4
     config_dic['inputID'] = [0,1]
     config_dic['outputID'] = [0,1]
     config_dic['num_qubit'] = 2

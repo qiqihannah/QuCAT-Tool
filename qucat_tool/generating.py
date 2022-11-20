@@ -20,7 +20,7 @@ def generate_test_file(config_dic):
         for i in range(len(config_dic['inputID'])):
             test_file.write('q'+str(config_dic['inputID'][i])+':0,1'+'\n')
 
-def generate_test_suite(config_dic, scenario, o):
+def generate_test_suite(config_dic, scenario, k):
     test_root = os.path.join(config_dic['program_folder'], config_dic['module_name'])
     result_root = os.path.join(config_dic['program_folder'], config_dic['module_name'], config_dic['module_name']+ '_'+ scenario)
     seedrow = ''
@@ -31,10 +31,10 @@ def generate_test_suite(config_dic, scenario, o):
     test_file_root = os.path.join(test_root, 'p' + str(config_dic['n']) + '.txt')
     if not os.path.exists(test_file_root):
         generate_test_file(config_dic)
-    test_suite_file = os.path.join(result_root, config_dic['module_name'] + '_input_o' + str(o) + '.txt')
+    test_suite_file = os.path.join(result_root, config_dic['module_name'] + '_input_o' + str(k) + '.txt')
 
    # print("pict " + test_file_root + " /o:" + str(o) + " /r > " + test_suite_file)
-    subprocess.run("pict " + test_file_root + " /o:" + str(o) + seedrow +" /r > " + test_suite_file,
+    subprocess.run("pict " + test_file_root + " /o:" + str(k) + seedrow +" /r > " + test_suite_file,
                          shell = True,
                          stdout = subprocess.PIPE,
                          cwd = config_dic['pict_root'])

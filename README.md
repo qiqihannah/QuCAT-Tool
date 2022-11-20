@@ -5,17 +5,17 @@
 ## Description (to change)
 With the development of quantum computing, proposing systematic and automatic approaches to testing quantum programs is getting more and more essential. In this paper, we present the quantum software testing tool \qucat tool, which implements a software testing technique, combinatorial testing. In this tool, we apply two test oracles to assess test results based on inputs and outputs. \qucat can be used in two usage scenarios, i.e., generate combinatorial test suites with a specific strength, and generate test suites with incremental strengths until it finds a fault, to help find faults of quantum programs. In addition, we assess the cost and effectiveness of \qucat tool with 3 faulty versions for 5 quantum programs. Results show that combinatorial test suites with low strength can find faults with low cost while that with higher strength performs better when it comes to some difficult faults with relatively higher cost.
 
-## Architecture of Quito
+## Architecture of QuCAT
 
 
 <!---
 your comment goes here
 and here
-![Architecture](https://github.com/EnautMendi/QuantumMutationQiskit/blob/master/images/architecture.png)
+![Architecture](https://github.com/EnautMendi/QuantumMutationQiskit/blob/master/images/overview.png)
 
 -->
 
-<img src="QuCATArchiteucure.png" width="1000">
+<img src="overview.png" width="1000">
 
 
 ## Installation

@@ -2,7 +2,7 @@ import time
 import os
 import configparser
 import sys
-from qucat_tool import executing
+import executing
 
 curPath = os.path.abspath(os.path.dirname(__file__))
 rootPath = os.path.split(curPath)[0]
@@ -35,10 +35,10 @@ def user_input():
 
 def scenario_input():
     print('\n')
-    text1 = "1. Scenario one"
+    text1 = "1. Functioinality One"
     print(text1)
     print("\n")
-    text2 = "2. Scenario two"
+    text2 = "2. Functionality Two"
     print(text2)
     print('\n')
     text3 = "3. Back to previous menu"#返回上一级
@@ -86,9 +86,9 @@ outputID=
 pict_root=
 ;(Required)
 ;Description: The root to run pict.
-o=
+k=
 ;(Optional)
-;Description: Order of combinations. In Sceenario 2, it refers to the maximum value of strength. o = 2 by default. 
+;Description: Order of combinations. In Functionality Two, it refers to the maximum value of strength. k = 2 by default. 
 significance_level=
 ;(Optional)
 ;Description: The significance level for statistical test. significance_level = 0.01 by default.
@@ -122,7 +122,7 @@ outputID=0,1
 
 [qucat_configuration]
 pict_root=.
-o=2
+k=2
 significance_level=0.01
 
 [program_specification]
@@ -369,12 +369,12 @@ def analyze_config(config):
         if int(inputID[-1]) > num_qubit - 1:
             print("Wrong output IDs")
             return False, ''
-        o = 2
-        if config.has_option('qucat_configuration', 'o'):
+        k = 2
+        if config.has_option('qucat_configuration', 'k'):
             try:
-                o = int(config.get('qucat_configuration', 'o'))
+                k = int(config.get('qucat_configuration', 'k'))
             except:
-                print("Error: The datat type of 'o' should be an Integer.")
+                print("Error: The datat type of 'k' should be an Integer.")
         significance_level = 0.01
         if config.has_option('qucat_configuration', 'significance_level'):
             try:
@@ -417,7 +417,7 @@ def analyze_config(config):
         config_dic['num_qubit'] = num_qubit
         config_dic['inputID'] = inputID
         config_dic['n'] = len(inputID)
-        config_dic['o'] = o
+        config_dic['k'] = k
         config_dic['outputID'] = outputID
         config_dic['valid_input'] = valid_input
         config_dic['valid_output'] = valid_output
@@ -448,7 +448,7 @@ if __name__ == '__main__':
             user_choice = user_input()
         elif user_choice == '3':
             while True:
-                print("Please enter the testing scenario number or go back to previous menu.")
+                print("Please enter the testing functionality number or go back to previous menu.")
                 scenario_choice = scenario_input()
                 if scenario_choice == '3':
                     break
