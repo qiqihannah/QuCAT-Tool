@@ -70,9 +70,8 @@ inputID=
 outputID= 
 ;(Required)
 ;Description: The IDs of output qubits which are the qubits to be measured.
-;Format: A non-repeating sequence separated by commas.
-    '''
-    qucat_configuration = '''
+;Format: A non-repeating sequence separated by commas
+
 [qucat_configuration]
 pict_root=
 ;(Optional)
@@ -83,8 +82,7 @@ k=
 significance_level=
 ;(Optional)
 ;Description: The significance level for statistical test. significance_level = 0.01 by default.
-'''
-    program_specification = '''
+
 [program_specification]
 ;Description: The program specification.
 ;Format:input string (binary),output string (binary)=probability
