@@ -4,7 +4,6 @@
 
 ## Description
 With the increased developments in quantum computing, the availability of systematic and automatic testing approaches for quantum programs is becoming more and more essential. To this end, we present the quantum software testing tool QuCAT for combinatorial testing of quantum programs. QuCAT provides two functionalities of use. With the first functionality, the tool generates a test suite of a given strength (e.g., pair-wise). With the second functionality, it generates test suites with increasing strength until a failure is triggered or a maximum strength is reached. QuCAT uses two test oracles to check the correctness of test outputs. We assess the cost and effectiveness of QuCAT with 3 faulty versions of 5 quantum programs. Results show that combinatorial test suites with a low strength can find faults with limited cost, while a higher strength performs better to trigger some difficult faults with relatively higher cost.
-
 ## Architecture of QuCAT
 
 
@@ -50,7 +49,7 @@ and here
 - The code has to be structured in a function named as 'run' with one parameter that refers to the quantum circuit.
 - Users only need to add gates to the circuit and measure output qubits to get the output. They don't need to set any register, initialize circuits, choose the simulation, or execute the circuits in 'run' function.
 
-A sample circuit is available <a href="/sample/qram.py">here</a>.
+A sample quantum program is available <a href="QR_Sample">here</a>.
 
 ### Configuration File
 The configuration file should be written in an INI file.
@@ -78,7 +77,7 @@ pict_root=
 ;Description: The absolute root to run pict. If the root is added to system variable, users don't need to specify it. pict_root='.' by default.
 k=
 ;(Optional)
-;Description: Order of combinations. In Sceenario 2, it refers to the maximum value of strength. o = 2 by default. 
+;Description: Order of combinations. In Functionality Two, it refers to the maximum value of strength. o = 2 by default. 
 significance_level=
 ;(Optional)
 ;Description: The significance level for statistical test. significance_level = 0.01 by default.
@@ -95,7 +94,7 @@ significance_level=
 ;0-,-=0.5
 ;Attention: '-' can refer to both '0' and '1'.
 ```
-A sample configuration file is available <a href="/sample/configuration.ini"> here </a>.
+A sample configuration file is available <a href="QR_Sample"> here </a>.
 
 First, you need to activate the conda environment:
    ```
@@ -104,7 +103,7 @@ First, you need to activate the conda environment:
 
 Second, you can start the program (from the repository root) as follows:
    ```
-   python qucat_tool/qucat.py
+   python qucat.py
    ```
    
 Third, you can enter a number to select your operation.
@@ -145,8 +144,8 @@ After running, you get 3 text files (2 in case there is no program specification
 ## Video Demonstration
 A video demo is available <a href="https://youtu.be/Z6RfFtNmXC8" target=_blank>here</a>.
 
-## Experimental Data (to change)
-Experimental data including quantum programs, and program specifications can be downloaded <a href="Data_Exp">here</a>.
+## Experimental Data
+Experimental data including quantum programs, and program specifications can be downloaded <a href="experiment_data">here</a>.
 
 ## Extension
 One can checkout the code from GitHub and provide extensions to QuCAT.
