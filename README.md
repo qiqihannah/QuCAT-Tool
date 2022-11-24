@@ -2,8 +2,8 @@
 
 <img src="qucat_logo.png" width="200">
 
-## Description (to change)
-With the increased developments in quantum computing, the availability of systematic and automatic testing approaches for quantum programs is becoming more and more essential. To this end, we present the quantum software testing tool QuCAT for combinatorial testing of quantum programs. QuCAT uses two test oracles to assess test outputs. QuCAT can be used in two functionalities. In the first modality, the tool generates a test suite of a given strength (e.g., pair-wise). In the second modality, it generates test suites with increasing strength until a failure is triggered or a maximum strength is reached. We assess the cost and effectiveness of the QuCAT tool with 3 faulty versions of 5 quantum programs. Results show that combinatorial test suites with a low strength can find faults with low cost, while a higher strength performs better to trigger some difficult faults with relatively higher cost.
+## Description
+With the increased developments in quantum computing, the availability of systematic and automatic testing approaches for quantum programs is becoming more and more essential. To this end, we present the quantum software testing tool QuCAT for combinatorial testing of quantum programs. QuCAT provides two functionalities of use. With the first functionality, the tool generates a test suite of a given strength (e.g., pair-wise). With the second functionality, it generates test suites with increasing strength until a failure is triggered or a maximum strength is reached. QuCAT uses two test oracles to check the correctness of test outputs. We assess the cost and effectiveness of QuCAT with 3 faulty versions of 5 quantum programs. Results show that combinatorial test suites with a low strength can find faults with limited cost, while a higher strength performs better to trigger some difficult faults with relatively higher cost.
 
 ## Architecture of QuCAT
 
