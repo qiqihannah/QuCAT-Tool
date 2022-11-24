@@ -142,8 +142,8 @@ After running, you get 3 text files (2 in case there is no program specification
 - Test Outputs and Assessment Results
 - Unit testing file of test suites
 
-## Video Demonstration (to change)
-A video demo is available <a href="https://www.youtube.com/watch?v=kuI9QaCo8A8" target=_blank>here</a>.
+## Video Demonstration
+A video demo is available <a href="https://youtu.be/Z6RfFtNmXC8" target=_blank>here</a>.
 
 ## Experimental Data (to change)
 Experimental data including quantum programs, and program specifications can be downloaded <a href="Data_Exp">here</a>.
