@@ -35,7 +35,7 @@ def user_input():
 
 def scenario_input():
     print('\n')
-    text1 = "1. Functioinality One"
+    text1 = "1. Functionality One"
     print(text1)
     print("\n")
     text2 = "2. Functionality Two"
